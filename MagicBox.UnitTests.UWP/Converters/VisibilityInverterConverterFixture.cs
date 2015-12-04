@@ -13,6 +13,9 @@ namespace MagicBox.UnitTests.UWP.Converters
     {
         private IValueConverter _converter;
 
+        /// <summary>
+        /// Initializes the converter object.
+        /// </summary>
         public VisibilityInverterConverterFixture()
         {
             _converter = new VisibilityInverterConverter();
