@@ -12,7 +12,7 @@ namespace MagicBox.UWP.Converters
     /// Visibility.Visible              Visibility.Collapsed
     /// Visibility.Collapsed            Visibility.Visible
     /// </remarks>
-    public class VisibilityInverterConverter : IValueConverter
+    public sealed class VisibilityInverterConverter : IValueConverter
     {
         /// <summary>
         /// Converter a valid Visibility value in its inverted value.
@@ -22,6 +22,7 @@ namespace MagicBox.UWP.Converters
         /// <param name="parameter">This parameter can be used to change the default logic flow.</param>
         /// <param name="language">The current language on the app.</param>
         /// <returns>The inversed value for the Visibility entered.</returns>
+        /// <exception cref="ArgumentException">When the value parameter is not a Visibility object.</exception>
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             if (!(value is Visibility))

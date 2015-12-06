@@ -107,7 +107,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\BooleanToBrushConverter.cs" />
     <Compile Include="Converters\VisibilityInverterConverter.cs" />
+    <Compile Include="Helpers\UiHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Properties\MagicBox.UWP.rd.xml" />
   </ItemGroup>

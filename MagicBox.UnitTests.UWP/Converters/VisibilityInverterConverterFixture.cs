@@ -9,7 +9,7 @@ namespace MagicBox.UnitTests.UWP.Converters
     /// <summary>
     /// The validation tests for the <see cref="VisibilityInverterConverter"/>.
     /// </summary>
-    public class VisibilityInverterConverterFixture : IDisposable
+    public sealed class VisibilityInverterConverterFixture : IDisposable
     {
         private IValueConverter _converter;
 
@@ -45,9 +45,7 @@ namespace MagicBox.UnitTests.UWP.Converters
 
             Assert.Equal(expected, actual);
 
-            Action testCode = () => _converter.Convert(null, typeof (Visibility), null, string.Empty);
-
-            Assert.Throws<ArgumentException>(testCode);
+            Assert.Throws<ArgumentException>(() => _converter.Convert(null, typeof(Visibility), null, string.Empty));
         }
 
         /// <summary>
@@ -56,10 +54,7 @@ namespace MagicBox.UnitTests.UWP.Converters
         [Fact]
         public void VerifyConverterBack()
         {
-            Action testCode =
-                () => _converter.ConvertBack(Visibility.Collapsed, typeof (Visibility), null, string.Empty);
-
-            Assert.Throws<NotImplementedException>(testCode);
+            Assert.Throws<NotImplementedException>(() => _converter.ConvertBack(Visibility.Collapsed, typeof(Visibility), null, string.Empty));
         }
     }
 }
