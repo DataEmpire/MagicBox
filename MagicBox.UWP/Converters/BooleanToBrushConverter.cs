@@ -1,8 +1,8 @@
 ﻿using System;
-using static System.Convert;
 using Windows.UI;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
+using static System.Convert;
 
 namespace MagicBox.UWP.Converters
 {
@@ -38,18 +38,7 @@ namespace MagicBox.UWP.Converters
                 throw new ArgumentException("the value must be a boolean value");
             }
 
-            bool source;
-
-            try
-            {
-                source = ToBoolean(value);
-            }
-            catch (Exception)
-            {
-                source = false;
-            }
-
-            var color = (source == true) ? OnTrueColor : OnFalseColor;
+            var color = ToBoolean(value) ? OnTrueColor : OnFalseColor;
 
             return new SolidColorBrush(color);
         }
@@ -70,18 +59,9 @@ namespace MagicBox.UWP.Converters
                 throw new ArgumentException("the value must be a Windows.UI.Xaml.Media.SolidColorBrush object");
             }
 
-            SolidColorBrush brush;
+            var brush = (SolidColorBrush)value;
 
-            try
-            {
-                brush = (SolidColorBrush) value;
-            }
-            catch (Exception)
-            {
-                brush = new SolidColorBrush(OnFalseColor);
-            }
-
-            return (brush.Color == OnTrueColor) ? true : false;
+            return (brush.Color == OnTrueColor);
         }
     }
 }
