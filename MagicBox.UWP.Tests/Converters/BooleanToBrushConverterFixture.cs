@@ -35,7 +35,7 @@ namespace MagicBox.UWP.Tests.Converters
         }
 
         /// <summary>
-        /// Verify if a bool value is being converted for the correct brush value.
+        /// Verify if a bool value is being converted for the correct brush value, also verifies the validation of input value.
         /// </summary>
         [TestMethod]
         public async Task VerifyConverterAsync()
@@ -51,11 +51,14 @@ namespace MagicBox.UWP.Tests.Converters
                 expected = new SolidColorBrush(_falseColor);
 
                 Assert.AreEqual(expected.Color, actual.Color);
+
+                Assert.ThrowsException<ArgumentException>(() => _converter.Convert(null, typeof(SolidColorBrush), null, string.Empty));
+                Assert.ThrowsException<ArgumentException>(() => _converter.Convert(_trueColor, typeof(SolidColorBrush), null, string.Empty));
             });
         }
 
         /// <summary>
-        /// Verify if the brush value is being converted for the correct bool value.
+        /// Verify if the brush value is being converted for the correct bool value, also verifies whether the input values are correct.
         /// </summary>
         [TestMethod]
         public async Task VerifyConverterBackAsync()
@@ -69,35 +72,19 @@ namespace MagicBox.UWP.Tests.Converters
                 actual = _converter.ConvertBack(new SolidColorBrush(_falseColor), typeof(bool), null, string.Empty);
 
                 Assert.AreEqual(false, actual);
+
+                Assert.ThrowsException<ArgumentException>(() => _converter.ConvertBack(null, typeof(SolidColorBrush), null, string.Empty));
+                Assert.ThrowsException<ArgumentException>(() => _converter.ConvertBack(_trueColor, typeof(SolidColorBrush), null, string.Empty));
             });
         }
 
         /// <summary>
-        /// Verifies whether the validation of type of value argument is working.
-        /// </summary>
-        [TestMethod]
-        public void VerifyConverterBackValidation()
-        {
-            Assert.ThrowsException<ArgumentException>(() => _converter.ConvertBack(null, typeof(SolidColorBrush), null, string.Empty));
-            Assert.ThrowsException<ArgumentException>(() => _converter.ConvertBack(_trueColor, typeof(SolidColorBrush), null, string.Empty));
-        }
-
-        /// <summary>
-        /// Verifies whether the validation of type of value argument is working.
-        /// </summary>
-        [TestMethod]
-        public void VerifyConverterValidation()
-        {
-            Assert.ThrowsException<ArgumentException>(() => _converter.Convert(null, typeof(SolidColorBrush), null, string.Empty));
-            Assert.ThrowsException<ArgumentException>(() => _converter.Convert(_trueColor, typeof(SolidColorBrush), null, string.Empty));
-        }
-
-        /// <summary>
-        /// Verifies whether the values to true and false statements are valid.
+        /// Verifies whether the values to true and false statements are valid, and that the converter is not null value.
         /// </summary>
         [TestMethod]
         public void VerifyInitialization()
         {
+            Assert.IsNotNull(_converter);
             Assert.AreEqual(_falseColor, _converter.OnFalseColor);
             Assert.AreEqual(_trueColor, _converter.OnTrueColor);
         }

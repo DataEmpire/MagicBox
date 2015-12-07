@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\BooleanToBrushConverter.cs" />
+    <Compile Include="Converters\StringToVisibilityConverter.cs" />
     <Compile Include="Converters\VisibilityInverterConverter.cs" />
     <Compile Include="Helpers\UiHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,22 +10,16 @@ namespace MagicBox.UWP.Tests.Converters
     /// The validation tests for the <see cref="VisibilityInverterConverter"/>.
     /// </summary>
     [TestClass]
-    public sealed class VisibilityInverterConverterFixture
+    public sealed class VisibilityInverterConverterFixture : IConverterTestable
     {
         private IValueConverter _converter;
 
-        /// <summary>
-        /// Initializes the converter object.
-        /// </summary>
         [TestInitialize]
         public void Initialize()
         {
             _converter = new VisibilityInverterConverter();
         }
 
-        /// <summary>
-        /// Verify if the inverter of an Visibility value it is working.
-        /// </summary>
         [TestMethod]
         public void VerifyConverter()
         {
@@ -42,13 +36,16 @@ namespace MagicBox.UWP.Tests.Converters
             Assert.ThrowsException<ArgumentException>(() => _converter.Convert(null, typeof(Visibility), null, string.Empty));
         }
 
-        /// <summary>
-        /// Verify the behaviors on the ConverterBack method call.
-        /// </summary>
         [TestMethod]
         public void VerifyConverterBack()
         {
             Assert.ThrowsException<NotImplementedException>(() => _converter.ConvertBack(Visibility.Collapsed, typeof(Visibility), null, string.Empty));
+        }
+
+        [TestMethod]
+        public void VerifyInitialization()
+        {
+            Assert.IsNotNull(_converter);
         }
     }
 }
