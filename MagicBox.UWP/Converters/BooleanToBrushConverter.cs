@@ -26,7 +26,7 @@ namespace MagicBox.UWP.Converters
         /// </summary>
         /// <param name="value">The bool value.</param>
         /// <param name="targetType">The type indicator for SolidColorBrush.</param>
-        /// <param name="parameter">A parameter that can be used to change the normal flow of logic.</param>
+        /// <param name="parameter">A parameter that can be used to change the normal flow of logic in the method.</param>
         /// <param name="language">The language to be used on converter scope.</param>
         /// <returns>A brush value correspondent with the boolean inputted.</returns>
         /// <exception cref="ArgumentException">When the value parameter is not a boolean value.</exception>
@@ -48,7 +48,7 @@ namespace MagicBox.UWP.Converters
         /// </summary>
         /// <param name="value">The brush value.</param>
         /// <param name="targetType">The type indicator of bool value.</param>
-        /// <param name="parameter">A parameter that can be used to change the normal flow of logic.</param>
+        /// <param name="parameter">A parameter that can be used to change the normal flow of logic in the method.</param>
         /// <param name="language">The language to be used on converter scope.</param>
         /// <returns>A boolean value that is correspondent with the brush inputted.</returns>
         /// <exception cref="ArgumentException">When the value parameter is not a SolidColorBrush object.</exception>

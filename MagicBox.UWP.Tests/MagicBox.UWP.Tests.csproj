@@ -98,7 +98,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\BooleanToBrushConverterFixture.cs" />
-    <Compile Include="Converters\IConverterTestable.cs" />
+    <Compile Include="Helpers\UiHelperFixture.cs" />
+    <Compile Include="Interfaces\IConverterTestable.cs" />
+    <Compile Include="Interfaces\IConverterTestableAsync.cs" />
+    <Compile Include="Interfaces\ITestable.cs" />
     <Compile Include="Converters\StringToVisibilityConverterFixture.cs" />
     <Compile Include="Converters\VisibilityInverterConverterFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

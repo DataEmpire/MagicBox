@@ -19,8 +19,8 @@ namespace MagicBox.UWP.Converters
         /// </summary>
         /// <param name="value">A valid <see cref="Visibility"/> value.</param>
         /// <param name="targetType">The type for <see cref="Visibility"/>.</param>
-        /// <param name="parameter">This parameter can be used to change the default logic flow.</param>
-        /// <param name="language">The current language on the app.</param>
+        /// <param name="parameter">A parameter that can be used to change the normal flow of logic in the method.</param>
+        /// <param name="language">The language to be used on converter scope.</param>
         /// <returns>The inversed value for the Visibility entered.</returns>
         /// <exception cref="ArgumentException">When the value parameter is not a Visibility object.</exception>
         public object Convert(object value, Type targetType, object parameter, string language)
@@ -36,17 +36,17 @@ namespace MagicBox.UWP.Converters
         }
 
         /// <summary>
-        /// Already not implemented once that this method is called when target updates source object.
+        /// Not implemented yet.
         /// </summary>
-        /// <param name="value">A <see cref="Visibility"/> value.</param>
+        /// <param name="value">A value.</param>
         /// <param name="targetType">The type indicator to the <see cref="Visibility"/> type.</param>
-        /// <param name="parameter">This parameter can be used to change the default logic flow.</param>
-        /// <param name="language">The current language on the app.</param>
+        /// <param name="parameter">A parameter that can be used to change the normal flow of logic in the method.</param>
+        /// <param name="language">The language to be used on converter scope.</param>
         /// <returns>A new object of a <see cref="NotImplementedException"/>.</returns>
-        /// <exception cref="NotImplementedException">I don't see a situation in that this can be used or invoked.</exception>
+        /// <exception cref="NotImplementedException">This method is not implemented yet.</exception>
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("this method already is not accept a TwoWay binding mode");
         }
     }
 }

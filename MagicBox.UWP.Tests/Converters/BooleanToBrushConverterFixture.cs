@@ -1,5 +1,6 @@
 ﻿using MagicBox.UWP.Converters;
 using MagicBox.UWP.Helpers;
+using MagicBox.UWP.Tests.Interfaces;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace MagicBox.UWP.Tests.Converters
     /// The test class for the converter of a boolean to a brush value.
     /// </summary>
     [TestClass]
-    public sealed class BooleanToBrushConverterFixture
+    public sealed class BooleanToBrushConverterFixture : IConverterTestableAsync, ITestable
     {
         private BooleanToBrushConverter _converter;
         private Color _falseColor;
@@ -42,12 +43,12 @@ namespace MagicBox.UWP.Tests.Converters
         {
             await UiHelper.ExecuteOnUiThreadAsync(() =>
             {
-                var actual = (SolidColorBrush) _converter.Convert(true, typeof(SolidColorBrush), null, string.Empty);
+                var actual = (SolidColorBrush)_converter.Convert(true, typeof(SolidColorBrush), null, string.Empty);
                 var expected = new SolidColorBrush(_trueColor);
 
                 Assert.AreEqual(expected.Color, actual.Color);
 
-                actual = (SolidColorBrush)_converter.Convert(false, typeof(SolidColorBrush), null, string.Empty) as SolidColorBrush;
+                actual = (SolidColorBrush)_converter.Convert(false, typeof(SolidColorBrush), null, string.Empty);
                 expected = new SolidColorBrush(_falseColor);
 
                 Assert.AreEqual(expected.Color, actual.Color);

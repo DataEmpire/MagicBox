@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
+using MagicBox.UWP.Tests.Interfaces;
 
 namespace MagicBox.UWP.Tests.Converters
 {
@@ -10,7 +11,7 @@ namespace MagicBox.UWP.Tests.Converters
     /// The validation tests for the <see cref="VisibilityInverterConverter"/>.
     /// </summary>
     [TestClass]
-    public sealed class VisibilityInverterConverterFixture : IConverterTestable
+    public sealed class VisibilityInverterConverterFixture : IConverterTestable, ITestable
     {
         private IValueConverter _converter;
 
