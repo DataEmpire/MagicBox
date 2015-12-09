@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox", "MagicBox\MagicB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox.UWP.Tests", "MagicBox.UWP.Tests\MagicBox.UWP.Tests.csproj", "{3C9F3E94-5C79-4617-A1B7-F81644983AB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{87BD9430-DF8E-4E6C-A388-39950D3AD314}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

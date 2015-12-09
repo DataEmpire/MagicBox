@@ -76,7 +76,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\BooleanToBrushConverterFixture.cs" />
+    <Compile Include="Converters\DateTimeToTimeSpanConverterFixture.cs" />
     <Compile Include="Helpers\UiHelperFixture.cs" />
     <Compile Include="Interfaces\IConverterTestable.cs" />
     <Compile Include="Interfaces\IConverterTestableAsync.cs" />
