@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace MagicBox.UWP.Tests.Interfaces
+namespace MagicBox.UWP.Interfaces
 {
     /// <summary>
     /// Defines the methods to doing test on a converter using a asynchronous context.

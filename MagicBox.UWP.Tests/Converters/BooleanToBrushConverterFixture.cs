@@ -1,11 +1,11 @@
 ﻿using MagicBox.UWP.Converters;
 using MagicBox.UWP.Helpers;
-using MagicBox.UWP.Tests.Interfaces;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System;
 using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml.Media;
+using MagicBox.UWP.Interfaces;
 
 namespace MagicBox.UWP.Tests.Converters
 {

@@ -1,4 +1,4 @@
-﻿namespace MagicBox.UWP.Tests.Interfaces
+﻿namespace MagicBox.UWP.Interfaces
 {
     /// <summary>
     /// Defines the method to all fixture class for a test class.

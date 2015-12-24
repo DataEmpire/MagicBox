@@ -5,23 +5,23 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 namespace MagicBox.UWP.Tests.Services
 {
     /// <summary>
-    /// The test class for input pane service.
+    /// The set of methods to verify all behaviors for the service of alert messages.
     /// </summary>
     [TestClass]
-    public class InputPaneServiceFixture : ITestable
+    public sealed class AlertMessageServiceFixture : ITestable
     {
-        private IInputPaneService _inputPaneService;
+        private IAlertMessageService _alertMessageService;
 
         [TestInitialize]
         public void Initialize()
         {
-            _inputPaneService = new InputPaneService();
+            _alertMessageService = new AlertMessageService();
         }
 
         [TestMethod]
         public void VerifyInitialization()
         {
-            Assert.IsNotNull(_inputPaneService);
+            Assert.IsNotNull(_alertMessageService);
         }
     }
 }

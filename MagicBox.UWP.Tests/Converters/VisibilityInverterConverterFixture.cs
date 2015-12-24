@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
-using MagicBox.UWP.Tests.Interfaces;
+using MagicBox.UWP.Interfaces;
 
 namespace MagicBox.UWP.Tests.Converters
 {

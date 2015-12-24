@@ -1,0 +1,2 @@
+MainPackage=D:\Documents\GitHub\DataEmpire\MagicBox\MagicBox.UWP.Tests\bin\ARM\Debug\MagicBox.UWP.Tests_1.0.1.0_ARM_Debug.appx
+SymbolPackage=D:\Documents\GitHub\DataEmpire\MagicBox\MagicBox.UWP.Tests\AppPackages\MagicBox.UWP.Tests_1.0.1.0_Debug_Test\MagicBox.UWP.Tests_1.0.1.0_ARM_Debug.appxsym

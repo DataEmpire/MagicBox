@@ -1,5 +1,5 @@
 ﻿using MagicBox.UWP.Converters;
-using MagicBox.UWP.Tests.Interfaces;
+using MagicBox.UWP.Interfaces;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System;
 using Windows.UI.Xaml.Data;
@@ -38,7 +38,7 @@ namespace MagicBox.UWP.Tests.Converters
             var actual = (DateTime)_converter.ConvertBack(mockedValue, typeof(TimeSpan), null, string.Empty);
             var expected = DateTime.Today.Add(new TimeSpan(14, 22, 20));
 
-            Assert.IsNotNull(actual); ;
+            Assert.IsNotNull(actual);
             Assert.AreEqual(expected, actual);
         }
 

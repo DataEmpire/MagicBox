@@ -1,4 +1,4 @@
-﻿namespace MagicBox.UWP.Tests.Interfaces
+﻿namespace MagicBox.UWP.Interfaces
 {
     /// <summary>
     /// Defines the method that I should to implement when I want to test a converter class.
